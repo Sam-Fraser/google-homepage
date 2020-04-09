@@ -4,10 +4,15 @@ body {
     width: auto;
     margin: 0;
 }
+div {
+    margin: 0;
+    display: block;
+}
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 .5em;
     padding: 0;
+    white-space: nowrap;
 }
 li {
     display: inline-block;
@@ -20,11 +25,8 @@ li a{
 li a:hover{
     text-decoration: underline;
 }
-.clear {
-    clear: both;
-}
 nav {
-    margin: 2% auto;
+    margin: 1% auto;
     font-size: .8em;
 }
 nav, footer {
@@ -38,19 +40,6 @@ nav ul, footer ul {
     display: flex;
     flex-direction: row;
 }
-#googleapps {
-    display: inline-block;
-    transform: scale(0.05);
-    height: 30px;
-    width: 30px;
-    vertical-align: middle;
-}
-#gaccinit {
-    background-color: gray;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
 main {
     display: flex;
     flex-direction: column;
@@ -60,10 +49,41 @@ main {
     justify-content: center;
     align-items: center;
 }
-#g-lgo {
-    align-content: center;
+#searchterm {
+    line-height: 2em;
+    width: 480px;
+    border: 1px solid #ddd;
+    margin: 30px 0;
+    border-radius: 1em;
+    padding: 0 3%;
 }
-
+#searchterm:hover {
+    border: 1px solid transparent;
+    box-shadow: 1px 0px 5px #ddd, -1px 0px 5px #ddd, 0px 1px 5px #ddd, 0px -1px 5px #ddd;
+}
+#searchterm:focus {
+    border: 1px solid transparent;
+    box-shadow: 1px 0px 5px #ddd, -1px 0px 5px #ddd, 0px 1px 5px #ddd, 0px -1px 5px #ddd;
+    outline: none;
+}
+#search-btns {
+    margin-bottom: 30px;
+}
+#search-btns .btn {
+    margin: 0 15px;
+    padding: 10px;
+    line-height: 1em;
+    font-size: 1em;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid transparent;
+    color: #5f6368;
+    border-radius: .2em;
+}
+#search-btns .btn:hover {
+    border: 1px solid #ddd;
+    color: #000;
+}
 footer {
     position: fixed;
     bottom: 0;
